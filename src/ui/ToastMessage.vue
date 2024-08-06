@@ -7,7 +7,7 @@
   >
     <div
       v-if="modalStore.toast.open"
-      class="w-[90%] max-w-screen-sm border fixed top-20 left-1/2 -translate-x-1/2 rounded-[4px] p-4 flex justify-between items-center gap-1 z-[999]"
+      class="w-[70%] max-w-screen-sm border fixed top-20 left-1/2 -translate-x-1/2 rounded-[4px] p-4 flex justify-between items-center gap-1 z-[999]"
       :class="
         modalStore.toast.mode === 'error'
           ? 'bg-[#ffe4e4] border-[#f1afaa]'

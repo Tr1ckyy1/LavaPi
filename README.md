@@ -1,26 +1,48 @@
-# lavapi-project
+# User Management Application
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the User Management Application! This repository contains the frontend codebase for the User Management Application with dummy data, demonstrating proficiency with Vue 3's Composition API, state management, API interactions, and CRUD operations.
+
+## Overview
+
+This application allows users to manage user data efficiently. Users can view, create, edit, and delete user information. The application emphasizes functionality, focusing on seamless API interactions and state management.
+
+## Features
+
+- **User Listing**: Fetch and display a list of users with pagination and sorting options.
+- **User Details**: View detailed information for a selected user.
+- **Create User**: Add new users with proper validation.
+- **Edit User**: Update existing user information.
+- **Delete User**: Remove users with a confirmation prompt.
+- **Global State Management**: Efficient handling of user data using Vue's official state management library.
+- **Responsive Design**: A responsive and user-friendly interface.
+
+## Technologies Used
+
+- **Vue.js (Composition API)**: A progressive JavaScript framework for building user interfaces.
+- **Vue Router**: The official router for Vue.js applications.
+- **Pinia**: A state management library for Vue.js.
+- **Axios**: A promise-based HTTP client for making HTTP requests from the browser.
+- **VeeValidate**: A form validation library for Vue.js.
+- **Tailwind CSS**: A utility-first CSS framework.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+We recommend using Visual Studio Code (VSCode) with the Volar extension for an optimized Vue development experience and typescript support. Please disable the Vetur extension if you have it installed.
 
 ## Project Setup
 
+1. **Clone the repository:**
+
+````sh
+git clone https://github.com/Tr1ckyy1/LavaPi
+
+2. Install dependencies:
+
 ```sh
 npm install
-```
+````
 
-### Compile and Hot-Reload for Development
+## Development
 
 ```sh
 npm run dev
@@ -37,4 +59,3 @@ npm run build
 ```sh
 npm run lint
 ```
-# LavaPi

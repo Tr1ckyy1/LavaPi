@@ -3,7 +3,7 @@
     <nav class="flex justify-between items-center">
       <button
         @click="navigate"
-        class="font-bold text-xl lg:text-4xl bg-clip-text bg-gradient-to-r from-green-500 via-orange-500 to-purple-500 hover:text-transparent duration-300 cursor-pointer"
+        class="font-bold text-xl lg:text-4xl bg-clip-text bg-gradient-to-r from-green-500 via-orange-500 to-purple-500 sm:hover:text-transparent duration-300 cursor-pointer"
       >
         LavaPi
       </button>
