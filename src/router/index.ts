@@ -19,9 +19,14 @@ const router = createRouter({
       component: () => import('../views/CreateUser.vue')
     },
     {
-      path: '/delete',
-      name: 'delete',
-      component: () => import('../views/HomeView.vue')
+      name: 'error',
+      path: '/error/:status',
+      component: () => import('../views/ErrorPage.vue')
+    },
+    {
+      name: 'not-found',
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/NotFound.vue')
     }
   ],
   scrollBehavior(_, _1, savedPosition) {

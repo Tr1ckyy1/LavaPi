@@ -1,33 +1,37 @@
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getUsers as getUsersApi } from '@/services/api/users'
+import { getUsers as getUsersApi, getUser as getUserApi } from '@/services/api/users'
 import type { UserData } from '@/types'
 
 export const useUsersStore = defineStore('UsersStore', () => {
   const users = ref<UserData[]>([])
-  const loading = ref(false)
-
-  const MAX_ITEMS_PER_PAGE = 9
-  const currentPage = ref(1)
-  const paginated = computed(() => users.value.slice(currentPage.value - 1, MAX_ITEMS_PER_PAGE))
-  const totalPages = computed(() => Math.ceil(users.value.length / MAX_ITEMS_PER_PAGE))
+  const singleUser = ref<UserData | null>(null)
+  const usersLoading = ref(false)
+  const singleUserLoading = ref(false)
 
   async function getUsers() {
+    usersLoading.value = true
     try {
-      loading.value = true
       const { data } = await getUsersApi()
       users.value = data.users
-      console.log(data.users)
     } catch (err) {
-      console.log(err)
+      console.error(err)
     } finally {
-      loading.value = false
+      usersLoading.value = false
     }
   }
 
-  function setCurrentPage(page: number) {
-    currentPage.value = page
+  async function getUser(userId: string) {
+    singleUserLoading.value = true
+    try {
+      const { data } = await getUserApi(userId)
+      singleUser.value = data
+    } catch (err) {
+      console.error(err)
+    } finally {
+      singleUserLoading.value = false
+    }
   }
 
-  return { users, getUsers, loading, paginated, currentPage, totalPages, setCurrentPage }
+  return { users, getUsers, usersLoading, singleUser, getUser, singleUserLoading }
 })
