@@ -33,8 +33,9 @@ We recommend using Visual Studio Code (VSCode) with the Volar extension for an o
 
 1. **Clone the repository:**
 
-````sh
+```sh
 git clone https://github.com/Tr1ckyy1/LavaPi
+```
 
 2. Install dependencies:
 
@@ -49,8 +50,6 @@ cp .env.example .env
 ```
 
 And now you should provide **.env** file all the necessary environment variables
-
-````
 
 ## Development
 
