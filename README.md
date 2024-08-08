@@ -40,6 +40,16 @@ git clone https://github.com/Tr1ckyy1/LavaPi
 
 ```sh
 npm install
+```
+
+3. Now we need to set our env file. Go to the root of your project and execute this command:
+
+```sh
+cp .env.example .env
+```
+
+And now you should provide **.env** file all the necessary environment variables
+
 ````
 
 ## Development
